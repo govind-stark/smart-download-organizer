@@ -1,118 +1,62 @@
-Here’s a professional-looking `README.md` file for your Chrome extension **Smart Download Organizer**, complete with badges, icons, image placeholder, and instructions.
+# Smart Download Organizer (Chrome Extension)
 
----
-
-### ✅ README.md
-
-```markdown
-# 📁 Smart Download Organizer
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/govind-stark/smart-download-organizer?style=social)](https://github.com/govind-stark/smart-download-organizer/stargazers)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-blue.svg)](#)
-
-Organize your Chrome downloads **automatically into folders** by file type and category!  
-✨ Created by [Govind Stark](https://github.com/govind-stark)
-
----
-
-## 🖼️ Preview
-
-![Smart Download Organizer Demo](https://via.placeholder.com/800x400.png?text=Smart+Download+Organizer+Demo)
-
----
+Organize your Chrome downloads automatically into categorized subfolders (Movies, Music, Documents, etc.) under your default **Downloads** folder.
 
 ## 🧠 Features
 
-✅ Auto-organize downloaded files by type  
-✅ Subcategorize into folders (e.g., `/Documents/PDFs/`)  
-✅ Runs in the background  
-✅ Initial cleanup of messy `Downloads` folder  
-✅ Lightweight and Open Source  
+- Automatically moves new downloads into categorized folders by type
+- Lightweight and privacy-friendly (no tracking, no network access)
+- Works offline
 
----
+## 📁 Folder Structure
 
-## 🗂️ Folder Structure Example
+- `Movies/mp4`, `Music/mp3`, `Documents/pdf`, `Images/jpg`, etc.
+
+## 🛠 How It Works
+
+Chrome extensions can no longer move files after download (in Manifest V3), so we use the `onDeterminingFilename` API to **pre-define** where each file should be saved.
+
+Example:
 
 ```
 
 Downloads/
-├── Documents/
-│   ├── PDFs/
-│   ├── Word/
-│   └── Spreadsheets/
-├── Movies/
-│   ├── MP4/
-│   └── MKV/
-├── Music/
-│   ├── MP3/
-│   └── FLAC/
-├── Images/
-├── Archives/
-└── Software/
+└── Movies/
+└── mp4/
+└── myvideo.mp4
 
 ````
 
----
+## 🚀 Installation (Manual)
 
-## 🚀 Installation
+> Chrome Web Store version coming soon!
 
-1. Clone the repo:
-
-```bash
-git clone https://github.com/govind-stark/smart-download-organizer.git
+1. Download or clone this repo:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/smart-download-organizer.git
 ````
 
-2. Open **Chrome** → `chrome://extensions/`
+2. Go to `chrome://extensions/`
+3. Enable **Developer Mode**
+4. Click **"Load Unpacked"**
+5. Select the `smart-download-organizer` folder
 
-3. Turn on **Developer Mode** (top right)
+✅ Done! Now try downloading a file and watch it get categorized!
 
-4. Click **Load unpacked** → Select the `smart-download-organizer` folder
+## 🔐 Permissions
 
----
+* `"downloads"` – To organize files at download time
 
-## ⚙️ How It Works
+No other permissions. No analytics. No tracking.
 
-* On every download, the extension checks the file type.
-* It moves the file into a categorized folder inside your **Downloads** directory.
-* If it’s the first time installing, it will **reorganize** existing files too!
+## 📜 License
 
----
-
-## 🛡 License
-
-This project is licensed under the MIT License © 2025 [Govind Stark](https://github.com/govind-stark).
-See the [LICENSE](LICENSE) file for details.
+MIT — do whatever you want, just credit me!
 
 ---
 
-## 💡 Future Plans
+## ✍️ Author
 
-* Add options panel for custom rules
-* Notification popups on file move
-* Support multiple download directories
+Made with ❤️ by Govind Stark(https://github.com/govind-stark)
 
----
 
-## ❤️ Contribute
-
-Pull requests are welcome! For major changes, please open an issue first.
-Let’s build smarter tools together 💻✨
-
----
-
-## 🌐 Connect
-
-* GitHub: [@govind-stark](https://github.com/govind-stark)
-* LinkedIn, Twitter, and more coming soon...
-
----
-
-> Made with ☕, code, and chaos by Govind Stark
-
-```
-
----
-
-Would you like me to generate a quick banner or demo image for the "Preview" section above? I can create a placeholder or styled example.
-```
