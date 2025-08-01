@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Smart Download Organizer",
+  "version": "1.0",
+  "description": "Organizes new downloads into categorized folders",
+  "permissions": ["downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Download Organizer"
+  }
+}
